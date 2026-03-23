@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet">
+
+</head>
+<body class="w-full h-screen bg-neutral-100 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.6),rgba(255,255,255,0.9)),repeating-linear-gradient(315deg,rgba(115,115,115,0.08)_1px,rgba(115,115,115,0.08)_2px,transparent_2px,transparent_38px)]">
+    <div class="sm:w-2xl lg:w-3xl h-screen overflow-y-auto mx-auto flex flex-col bg-neutral-50 border-r-8 border-l-8 border-neutral-100 shadow-box">
+
+        <div class="w-full h-32 flex items-center gap-1 flex-col justify-center"> 
+            <div class="size-18 mt-2 overflow-hidden border-4 border-neutral-200 shadow-box rounded-full ">
+                <img class="object-cover  " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz8Wa9dyqciKLll8aJQteXjJRD2v-JlwF9tg&s" alt="">
+            </div>
+            <div class="px-4 py-2 font-poppins text-neutral-500 shadow-box border-4 border-neutral-100 bg-linear-to-br from-neutral-50 via-neutral-100 to-neutral-50 rounded-full "><h1>Sydney Sweeney</h1></div>
+        </div>
+
+        <div id="chatBox" class="w-full flex-1 justify-end flex flex-col transition-all duration-300 gap-4 mask-t-from-80% overflow-y-auto mt-4  ">
+            
+        </div>
+
+        <!-- inputbox -->
+        <div class=" w-full h-38 md:h-42 lg:h-48 pt-4 pr-8  pl-8 pb-4 md:pb-10">
+            <div class="rounded-4xl border-2 overflow-hidden flex flex-col border-neutral-100 shadow-box bg-white w-full h-full">
+                <input id="inputBox" class="w-full h-[60%] pl-8 pr-8 text-lg font-medium outline-none font-inter placeholder:font-light text-neutral-500 placeholder:text-neutral-300 " type="text" placeholder="Text Message..." >
+                
+                <div class="w-full h-14 mb-2 relative p-2 pl-6 flex ">
+                    <div class="rounded-full p-2 text-2xl  flex items-center justify-center font-bold cursor-pointer hover:shadow-md hover:border hover:-translate-y-0.5 hover:scale-105 transition-all duration-300 bg-linear-to-br from-taupe-300 via-taupe-200 to-taupe-300 text-neutral-50"><svg class=" size-4 md:size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5V8C14 5.79086 12.2091 4 10 4C7.79086 4 6 5.79086 6 8V13.5C6 17.0899 8.91015 20 12.5 20C16.0899 20 19 17.0899 19 13.5V4H21V13.5C21 18.1944 17.1944 22 12.5 22C7.80558 22 4 18.1944 4 13.5V8C4 4.68629 6.68629 2 10 2C13.3137 2 16 4.68629 16 8V13.5C16 15.433 14.433 17 12.5 17C10.567 17 9 15.433 9 13.5V8H11V13.5C11 14.3284 11.6716 15 12.5 15C13.3284 15 14 14.3284 14 13.5Z"></path></svg></div>
+                    
+                    <div class="rounded-full p-2 absolute right-0 mr-22 text-2xl flex hover:scale-105 items-center justify-center font-bold cursor-pointer hover:shadow-md hover:border hover:-translate-y-0.5 transition-all duration-300 bg-linear-to-br from-taupe-300 via-taupe-200 to-taupe-300 text-neutral-50"><svg class="size-5 md:size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 7H7V17H5V7ZM1 10H3V14H1V10ZM9 2H11V20H9V2ZM13 4H15V22H13V4ZM17 7H19V17H17V7ZM21 10H23V14H21V10Z"></path></svg></div>
+                    <button  onclick="sendMessage()" class="rounded-full p-2 active:scale-98 absolute right-0 mr-8 hover:scale-105 shadow-box text-2xl flex items-center justify-center font-bold cursor-pointer hover:shadow-md hover:border hover:-translate-y-0.5 border-blue-100 transition-all duration-300 bg-linear-to-br from-teal-400 via-teal-300 to-teal-400 text-neutral-50"><svg class="size-5 md:size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.4999 2C20.0945 1.99965 20.6988 2.15061 21.2499 2.46875C22.924 3.43525 23.4977 5.57598 22.5312 7.25L15.0312 20.2402C14.0647 21.9142 11.924 22.488 10.2499 21.5215C9.41368 21.0386 8.85171 20.2606 8.62005 19.3975L6.85345 12.8037L2.02533 7.97461C0.65837 6.60765 0.658729 4.39208 2.02533 3.02539C2.65755 2.39311 3.53385 2.00011 4.49994 2H19.4999ZM4.49994 4C4.08555 4.00011 3.71182 4.167 3.43939 4.43945C2.85354 5.0254 2.85378 5.97494 3.43939 6.56055L7.914 11.0352L14.8906 7.00684C15.3688 6.7308 15.9806 6.89487 16.2568 7.37305C16.5327 7.85124 16.3687 8.46312 15.8906 8.73926L8.914 12.7676L10.5517 18.8789C10.6515 19.2509 10.8913 19.5819 11.2499 19.7891C11.9673 20.2032 12.8845 19.9575 13.2988 19.2402L20.7988 6.25C21.213 5.53256 20.9674 4.61539 20.2499 4.20117C20.0128 4.06427 19.7555 3.99982 19.5009 4H4.49994Z"></path></svg></button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
